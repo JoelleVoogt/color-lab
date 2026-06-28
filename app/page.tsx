@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col items-center relative content-start">
       <Nav />
       <Name />
-      <div className="flex flex-row max-w-7xl max-h-4/6 gap-10 w-full h-full m-10">
+      <div className="flex flex-row max-w-7xl max-h-4/6 gap-8 w-full h-full m-10">
         <ColorPicker />
         <CodeOutput />
       </div>
