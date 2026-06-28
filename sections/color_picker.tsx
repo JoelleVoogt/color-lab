@@ -6,7 +6,7 @@ export default function ColorPicker() {
   return (
     <>
       <div className="flex flex-1 relative p-6 min-h-[320px] md:min-h-[480px] justify-center items-center bg-[#C96442] border-8 border-[#C96442] font-mono w-full rounded-2xl">
-        <div className="flex flex-row gap-2 absolute top-6 right-6">
+        <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
           <button
             type="button"
             aria-label="Shuffle color"

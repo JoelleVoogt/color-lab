@@ -5,7 +5,7 @@ export default function ColorVariable({
 }: {
   scale: string;
   value: string;
-  text: "white" | "gray-950";
+  text: "white" | "black";
 }) {
   return (
     <>
