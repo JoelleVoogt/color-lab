@@ -7,14 +7,16 @@ import ColorOutput from "@/sections/color_output";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center relative content-start">
+    <div className="flex flex-col items-center">
       <Nav />
-      <Name />
-      <div className="flex flex-row max-w-7xl max-h-4/6 gap-8 w-full h-full m-10">
-        <ColorPicker />
-        <CodeOutput />
+      <div className="flex flex-col items-center relative content-start w-full px-4 lg:p-0">
+        <Name />
+        <div className="flex flex-col md:flex-row max-w-7xl max-h-4/6 gap-6 w-full h-full m-10">
+          <ColorPicker />
+          <CodeOutput />
+        </div>
+        <ColorOutput />
       </div>
-      <ColorOutput />
     </div>
   );
 }
