@@ -5,7 +5,7 @@ import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
 export default function ColorPicker() {
   return (
     <>
-      <div className="flex flex-1 relative p-4 h-[480px] justify-center items-center bg-[#C96442] font-mono w-full rounded-2xl">
+      <div className="flex flex-1 relative p-6 h-[480px] justify-center items-center bg-[#C96442] border-8 border-[#C96442] font-mono w-full rounded-2xl">
         <div className="flex flex-row gap-2 absolute top-6 right-6">
           <button
             type="button"
@@ -14,7 +14,6 @@ export default function ColorPicker() {
           >
             <ShuffleIcon size={20} weight="regular" color="white" />
           </button>
-
           <button
             type="button"
             aria-label="Pick color"
