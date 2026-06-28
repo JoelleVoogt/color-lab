@@ -1,7 +1,11 @@
 export default function Name() {
   return (
-    <p className="flex justify-center max-w-7xl bg-blue-100 w-full m-16">
-      Name
-    </p>
+    <>
+      <div className="flex justify-center max-w-7xl w-full mt-16">
+        <div className="flex justify-start w-full py-4 px-6 bg-white rounded-full border border-[#BABABA]">
+          <p className="text-[#BABABA]">Name your color...</p>
+        </div>
+      </div>
+    </>
   );
 }
