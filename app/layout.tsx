@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 const anthropicMono = localFont({
   src: [
@@ -49,7 +38,7 @@ const anthropicSerif = localFont({
 export const metadata: Metadata = {
   title: "Color Lab",
   description:
-    "Genereer vanuit één basiskleur een complete tintschaal van 100 tot 900, direct te plakken als Tailwind-thema. Consistente color tokens zonder rekenwerk.p",
+    "Genereer vanuit één basiskleur een complete tintschaal van 100 tot 900, direct te plakken als Tailwind-thema. Consistente color tokens zonder rekenwerk.",
 };
 
 export default function RootLayout({
@@ -60,7 +49,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       className={`${anthropicMono.className} ${anthropicSans.className} ${anthropicSerif.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

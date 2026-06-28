@@ -9,16 +9,16 @@ export default function CodeVariable({
 }) {
   return (
     <>
-      <div className="flex flex-row w-full border-l-2 border-[#343434] pl-4">
-        <p className="font-mono text-[#9ED8F7]">--color</p>
-        <p className="font-mono text-[#9ED8F7]">-{name}</p>
-        <div className="flex gap-1">
-          <p className="font-mono text-[#9ED8F7]">-{scale}</p>
-          <p className="font-mono text-[#D4D4D4]">:</p>
-          <p className="font-mono text-[#EFA688]">{value}</p>
-          <p className="font-mono text-[#D4D4D4]">;</p>
-        </div>
-      </div>
+      <span className="flex flex-row w-full border-l-2 border-[#343434] pl-2 md:pl-6 whitespace-nowrap">
+        <span className="font-mono text-[#9ED8F7]">--color</span>
+        <span className="font-mono text-[#9ED8F7]">-{name}</span>
+        <span className="flex gap-1">
+          <span className="font-mono text-[#9ED8F7]">-{scale}</span>
+          <span className="font-mono text-[#D4D4D4]">:</span>
+          <span className="font-mono text-[#EFA688]">{value}</span>
+          <span className="font-mono text-[#D4D4D4]">;</span>
+        </span>
+      </span>
     </>
   );
 }

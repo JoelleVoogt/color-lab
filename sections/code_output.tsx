@@ -6,7 +6,7 @@ import CodeVariable from "@/components/code_variable";
 export default function ColorPicker() {
   return (
     <>
-      <div className="flex flex-1 relative p-6 min-h-[480px] justify-start items-start bg-gray-950 border-8 border-[#393939] font-mono w-full rounded-2xl">
+      <div className="flex flex-1 relative p-6 min-h-[424px] md:min-h-[480px] justify-start items-start bg-gray-950 border-8 border-[#393939] font-mono w-full rounded-2xl">
         <div className="flex flex-row gap-2 absolute top-6 right-6">
           <button
             type="button"
@@ -17,8 +17,8 @@ export default function ColorPicker() {
           </button>
         </div>
 
-        <div className="flex flex-col gap-4 pr-24">
-          <div className="flex flex-row gap-1">
+        <div className="flex flex-col gap-6 pr-0 pt-5 md:pt-0 md:pr-24">
+          <div className="flex flex-row gap-2">
             <p className="font-mono text-[#FFA1EE]">theme</p>
             <p className="font-mono text-[#FFEE58] w-full">{"{"}</p>
           </div>
