@@ -2,6 +2,8 @@ import { oklch } from "culori";
 
 export default function CalculateValue() {
   const base = oklch("#C96442");
+  const steps = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
   console.log(base);
 
   return (
