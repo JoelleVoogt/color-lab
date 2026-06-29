@@ -1,5 +1,5 @@
 import ColorVariable from "@/components/color_variable";
-import { formatHex } from "culori";
+import { formatHex, wcagContrast } from "culori";
 import { generateScale } from "@/data/generate_scale";
 
 export default function ColorOutput() {
@@ -8,14 +8,21 @@ export default function ColorOutput() {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-9 gap-2 max-w-7xl w-full my-8">
-        {scale.map((color) => (
-          <ColorVariable
-            key={color.step}
-            scale={String(color.step)}
-            value={formatHex(color)}
-            text="white"
-          />
-        ))}
+        {scale.map((color) => {
+          const contrastWithBlack = wcagContrast(color, "black");
+          const contrastWithWhite = wcagContrast(color, "white");
+          const textColor =
+            contrastWithBlack > contrastWithWhite ? "black" : "white";
+
+          return (
+            <ColorVariable
+              key={color.step}
+              scale={String(color.step)}
+              value={formatHex(color)}
+              text={textColor}
+            />
+          );
+        })}
       </div>
     </>
   );
