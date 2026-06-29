@@ -18,3 +18,14 @@ export function generateScale(hex: string) {
     { step: 900, mode: "oklch" as const, l: 0.15, c: 0, h: base.h },
   ];
 }
+
+// const light = base.l;
+// const chroma = base.c;
+
+// function chromaAdjust(){
+//   base.c * curve
+// }
+
+// function lightnessAdjust(){
+//   base.l
+// }
