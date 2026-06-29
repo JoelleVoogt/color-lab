@@ -4,8 +4,8 @@ import Name from "@/sections/name";
 import ColorPicker from "@/sections/color_picker";
 import CodeOutput from "@/sections/code_output";
 import ColorOutput from "@/sections/color_output";
-import CalculateValue from "@/data/calculate_value";
 import Footer from "@/sections/footer";
+import CalculateValue from "@/sections/color_output";
 
 export default function Home() {
   return (
@@ -19,7 +19,6 @@ export default function Home() {
             <CodeOutput />
           </div>
           <ColorOutput />
-          <CalculateValue />
         </div>
       </div>
       <Footer />
