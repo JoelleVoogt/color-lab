@@ -51,6 +51,18 @@ export default function RootLayout({
       lang="en"
       className={`${anthropicMono.className} ${anthropicSans.className} ${anthropicSerif.className} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="icon"
+          href="/light.svg"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/dark.svg"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
