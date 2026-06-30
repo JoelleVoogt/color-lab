@@ -2,8 +2,12 @@
 
 import { CopyIcon } from "@phosphor-icons/react";
 import CodeVariable from "@/components/code_variable";
+import { generateScale } from "@/data/generate_scale";
+import { formatHex } from "culori";
 
 export default function ColorPicker() {
+  const scale = generateScale("#C96442");
+
   return (
     <>
       <div className="flex flex-1 relative p-6 min-h-[424px] md:min-h-[480px] justify-start items-start bg-gray-950 border-4 md:border-6 border-[#393939] font-mono w-full rounded-2xl">
@@ -24,17 +28,17 @@ export default function ColorPicker() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <CodeVariable name="brand" scale="100" value="#C96442" />
-            <CodeVariable name="brand" scale="200" value="#C96442" />
-            <CodeVariable name="brand" scale="300" value="#C96442" />
-            <CodeVariable name="brand" scale="400" value="#C96442" />
-            <CodeVariable name="brand" scale="500" value="#C96442" />
-            <CodeVariable name="brand" scale="600" value="#C96442" />
-            <CodeVariable name="brand" scale="700" value="#C96442" />
-            <CodeVariable name="brand" scale="800" value="#C96442" />
-            <CodeVariable name="brand" scale="900" value="#C96442" />
+            {scale.map((color) => {
+              return (
+                <CodeVariable
+                  key={color.step}
+                  name="brand"
+                  scale={String(color.step)}
+                  value={formatHex(color)}
+                />
+              );
+            })}
           </div>
-
           <p className="font-mono text-[#FFEE58] w-full">{"}"}</p>
         </div>
       </div>
