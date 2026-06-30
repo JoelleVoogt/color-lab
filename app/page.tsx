@@ -14,7 +14,7 @@ export default function Home() {
         <Nav />
         <div className="flex flex-col items-center relative content-start w-full px-4 lg:p-0">
           <Name />
-          <div className="flex flex-col sm:flex-row max-w-7xl max-h-4/6 gap-10 w-full h-full mt-12">
+          <div className="flex flex-col sm:flex-row max-w-7xl max-h-4/6 gap-8 w-full h-full mt-12">
             <ColorPicker />
             <CodeOutput />
           </div>
