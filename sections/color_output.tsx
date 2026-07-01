@@ -1,3 +1,5 @@
+"use client";
+
 import ColorVariable from "@/components/color_variable";
 import { formatHex, wcagContrast } from "culori";
 import { generateScale } from "@/data/generate_scale";
@@ -20,6 +22,9 @@ export default function ColorOutput() {
               scale={String(color.step)}
               value={formatHex(color)}
               text={textColor}
+              CopyButton={() => {
+                navigator.clipboard.writeText(formatHex(color));
+              }}
             />
           );
         })}

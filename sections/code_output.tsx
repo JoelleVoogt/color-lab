@@ -45,3 +45,11 @@ export default function ColorPicker() {
     </>
   );
 }
+
+//     const scale = generateScale("#C96442");
+
+//   {scale.map((color) => {
+//   return (
+//     [`"--color", "-brand", ${color.step}, ${formatHex(color)}.join("\n");`]
+//   );
+// }})
