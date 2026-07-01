@@ -1,4 +1,6 @@
 "use client";
+import { useState, useEffect } from "react";
+import { CheckIcon } from "@phosphor-icons/react";
 
 export default function ColorVariable({
   scale,
@@ -11,16 +13,40 @@ export default function ColorVariable({
   text: "white" | "black";
   CopyButton: () => void;
 }) {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (copied === true) {
+      setTimeout(() => {
+        setCopied(false);
+      }, 350);
+    }
+  }, [copied]);
+
   return (
     <>
       <button
         type="button"
-        onClick={CopyButton}
-        className="flex flex-col gap-12 w-full p-4 rounded-lg border border-[#262624] text-left cursor-pointer"
+        onClick={() => {
+          CopyButton();
+          setCopied(true);
+        }}
         style={{ backgroundColor: `${value}`, color: `${text}` }}
+        className="p-4 rounded-lg border border-[#262624] cursor-pointer"
       >
-        <p className="font-semibold">{scale}</p>
-        <p>{value}</p>
+        {copied ? (
+          <CheckIcon
+            size={40}
+            weight="regular"
+            className="flex w-full justify-center"
+            style={{ color: `${text}` }}
+          />
+        ) : (
+          <div className="flex flex-col gap-12 w-full text-left">
+            <p className="font-semibold">{scale}</p>
+            <p>{value}</p>
+          </div>
+        )}
       </button>
     </>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CopyIcon, CheckIcon } from "@phosphor-icons/react";
 import CodeVariable from "@/components/code_variable";
 import { generateScale } from "@/data/generate_scale";
