@@ -1,6 +1,8 @@
 "use client";
 
-import { CopyIcon } from "@phosphor-icons/react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { CopyIcon, CheckIcon } from "@phosphor-icons/react";
 import CodeVariable from "@/components/code_variable";
 import { generateScale } from "@/data/generate_scale";
 import { formatHex } from "culori";
@@ -8,6 +10,15 @@ import CopyButton from "@/components/copy_clipboard";
 
 export default function ColorPicker() {
   const scale = generateScale("#C96442");
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (copied === true) {
+      setTimeout(() => {
+        setCopied(false);
+      }, 350);
+    }
+  }, [copied]);
 
   return (
     <>
@@ -27,11 +38,16 @@ export default function ColorPicker() {
 --color-brand-${scale[7].step} : ${formatHex(scale[7])} ;
 --color-brand-${scale[8].step} : ${formatHex(scale[8])} ;`,
               });
+              setCopied(true);
             }}
             aria-label="Copy to clipboard"
             className="flex align-middle bg-[#343434] p-3 rounded-sm hover:bg-[#4A4A4A] transition-colors cursor-pointer"
           >
-            <CopyIcon size={20} weight="regular" color="white" />
+            {copied ? (
+              <CheckIcon size={20} weight="regular" color="white" />
+            ) : (
+              <CopyIcon size={20} weight="regular" color="white" />
+            )}
           </button>
         </div>
 
