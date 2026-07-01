@@ -3,6 +3,7 @@
 import ColorVariable from "@/components/color_variable";
 import { formatHex, wcagContrast } from "culori";
 import { generateScale } from "@/data/generate_scale";
+import CopyButton from "@/components/copy_clipboard";
 
 export default function ColorOutput() {
   const scale = generateScale("#C96442");
@@ -23,7 +24,7 @@ export default function ColorOutput() {
               value={formatHex(color)}
               text={textColor}
               CopyButton={() => {
-                navigator.clipboard.writeText(formatHex(color));
+                CopyButton({ text: formatHex(color) });
               }}
             />
           );
