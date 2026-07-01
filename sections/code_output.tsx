@@ -4,6 +4,7 @@ import { CopyIcon } from "@phosphor-icons/react";
 import CodeVariable from "@/components/code_variable";
 import { generateScale } from "@/data/generate_scale";
 import { formatHex } from "culori";
+import CopyButton from "@/components/copy_clipboard";
 
 export default function ColorPicker() {
   const scale = generateScale("#C96442");
@@ -14,6 +15,19 @@ export default function ColorPicker() {
         <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
           <button
             type="button"
+            onClick={() => {
+              CopyButton({
+                text: `--color-brand-${scale[0].step} : ${formatHex(scale[0])} ; 
+--color-brand-${scale[1].step} : ${formatHex(scale[1])} ;
+--color-brand-${scale[2].step} : ${formatHex(scale[2])} ;
+--color-brand-${scale[3].step} : ${formatHex(scale[3])} ;
+--color-brand-${scale[4].step} : ${formatHex(scale[4])} ;
+--color-brand-${scale[5].step} : ${formatHex(scale[5])} ;
+--color-brand-${scale[6].step} : ${formatHex(scale[6])} ;
+--color-brand-${scale[7].step} : ${formatHex(scale[7])} ;
+--color-brand-${scale[8].step} : ${formatHex(scale[8])} ;`,
+              });
+            }}
             aria-label="Copy to clipboard"
             className="flex align-middle bg-[#343434] p-3 rounded-sm hover:bg-[#4A4A4A] transition-colors cursor-pointer"
           >
@@ -23,7 +37,7 @@ export default function ColorPicker() {
 
         <div className="flex flex-col gap-6 pr-0 pt-5 md:pt-0 md:pr-24">
           <div className="flex flex-row gap-2">
-            <p className="font-mono text-[#FFA1EE]">theme</p>
+            <p className="font-mono text-[#FFA1EE]">:root</p>
             <p className="font-mono text-[#FFEE58] w-full">{"{"}</p>
           </div>
 
@@ -32,6 +46,7 @@ export default function ColorPicker() {
               return (
                 <CodeVariable
                   key={color.step}
+                  color="--color"
                   name="brand"
                   scale={String(color.step)}
                   value={formatHex(color)}
@@ -45,11 +60,3 @@ export default function ColorPicker() {
     </>
   );
 }
-
-//     const scale = generateScale("#C96442");
-
-//   {scale.map((color) => {
-//   return (
-//     [`"--color", "-brand", ${color.step}, ${formatHex(color)}.join("\n");`]
-//   );
-// }})

@@ -1,8 +1,10 @@
 export default function CodeVariable({
+  color,
   name,
   scale,
   value,
 }: {
+  color: string;
   name: string;
   scale: string;
   value: string;
@@ -10,7 +12,7 @@ export default function CodeVariable({
   return (
     <>
       <span className="flex flex-row w-full border-l-2 border-[#343434] pl-2 md:pl-6 whitespace-nowrap">
-        <span className="font-mono text-[#9ED8F7]">--color</span>
+        <span className="font-mono text-[#9ED8F7]">{color}</span>
         <span className="font-mono text-[#9ED8F7]">-{name}</span>
         <span className="flex gap-1">
           <span className="font-mono text-[#9ED8F7]">-{scale}</span>
