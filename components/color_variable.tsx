@@ -32,7 +32,7 @@ export default function ColorVariable({
           setCopied(true);
         }}
         style={{ backgroundColor: `${value}`, color: `${text}` }}
-        className="p-4 rounded-lg border border-[#262624] cursor-pointer"
+        className="p-4 rounded-lg border h-[136px] border-[#262624] cursor-pointer"
       >
         {copied ? (
           <CheckIcon
@@ -42,7 +42,7 @@ export default function ColorVariable({
             style={{ color: `${text}` }}
           />
         ) : (
-          <div className="flex flex-col gap-12 w-full text-left">
+          <div className="flex flex-col justify-between h-full text-left">
             <p className="font-semibold">{scale}</p>
             <p>{value}</p>
           </div>
