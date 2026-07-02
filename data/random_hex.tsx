@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
 
 function Random() {
   const [color, setColor] = useState("#C96442");
@@ -21,10 +22,28 @@ function Random() {
 
   return (
     <div
-      className="flex justify-evenly items-center mt-4 px-[30px] text-white"
-      style={{ background: color, width: "50vw", height: "50vh" }}
+      role="button"
+      onClick={hexy}
+      className="flex flex-1 relative p-6 min-h-[320px] md:min-h-[480px] justify-center items-center font-mono text-white/40 text-6xl md:text-7xl w-full text-center font-mono w-full rounded-2xl cursor-pointer"
+      style={{ backgroundColor: color }}
     >
-      <button onClick={hexy}>{color}</button>
+      <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
+        <button
+          type="button"
+          aria-label="Shuffle color"
+          className="flex align-middle bg-white/10 p-3 rounded-sm hover:bg-white/20 transition-colors cursor-pointer"
+        >
+          <ShuffleIcon size={20} weight="regular" color="white" />
+        </button>
+        <button
+          type="button"
+          aria-label="Pick color"
+          className="flex align-middle bg-white/10 p-3 rounded-sm hover:bg-white/20 transition-colors cursor-pointer"
+        >
+          <EyedropperIcon size={20} weight="regular" color="white" />
+        </button>
+      </div>
+      {color}
     </div>
   );
 }

@@ -18,7 +18,6 @@ export default function Home() {
             <ColorPicker />
             <CodeOutput />
           </div>
-          <Random />
           <ColorOutput />
         </div>
       </div>
