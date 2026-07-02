@@ -4,8 +4,14 @@ import { useState } from "react";
 import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
 import { wcagContrast } from "culori";
 
-function ColorPicker() {
+function Random() {
   const [color, setColor] = useState("#C96442");
+  const contrastWithBlack = wcagContrast(color, "black");
+  const contrastWithWhite = wcagContrast(color, "white");
+  const textColor =
+    contrastWithBlack > contrastWithWhite ? "#1a1a1a4d" : "#ffffff4d";
+  const iconColor =
+    contrastWithBlack > contrastWithWhite ? "#1a1a1a" : "#ffffff";
 
   function randomColorUtility(length: number) {
     return Math.floor(Math.random() * length);
@@ -17,7 +23,6 @@ function ColorPicker() {
     for (let i = 0; i < 6; i++) {
       hexColor += hex[randomColorUtility(hex.length)];
     }
-    console.log("Generated hex color:", hexColor);
     setColor(hexColor);
   }
 
@@ -25,8 +30,8 @@ function ColorPicker() {
     <div
       role="button"
       onClick={hexy}
-      className="flex flex-1 relative p-6 min-h-[320px] md:min-h-[480px] justify-center items-center font-mono text-white/40 text-6xl md:text-7xl w-full text-center font-mono w-full rounded-2xl cursor-pointer"
-      style={{ backgroundColor: color }}
+      className="flex flex-1 relative p-6 min-h-80 md:min-h-120 justify-center items-center font-mono text-6xl md:text-7xl w-full text-center rounded-2xl cursor-pointer"
+      style={{ backgroundColor: color, color: textColor }}
     >
       <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
         <button
@@ -34,14 +39,26 @@ function ColorPicker() {
           aria-label="Shuffle color"
           className="flex align-middle bg-white/10 p-3 rounded-sm hover:bg-white/20 transition-colors cursor-pointer"
         >
-          <ShuffleIcon size={20} weight="regular" color="white" />
+          <ShuffleIcon
+            size={20}
+            weight="regular"
+            style={{
+              color: iconColor,
+            }}
+          />
         </button>
         <button
           type="button"
           aria-label="Pick color"
           className="flex align-middle bg-white/10 p-3 rounded-sm hover:bg-white/20 transition-colors cursor-pointer"
         >
-          <EyedropperIcon size={20} weight="regular" color="white" />
+          <EyedropperIcon
+            size={20}
+            weight="regular"
+            style={{
+              color: iconColor,
+            }}
+          />
         </button>
       </div>
       {color}
@@ -49,4 +66,4 @@ function ColorPicker() {
   );
 }
 
-export default ColorPicker;
+export default Random;
