@@ -8,7 +8,7 @@ export default function Name({ onChange }: NameProps) {
           type="text"
           placeholder="Name your color..."
           onChange={(e) => onChange(e.target.value)}
-          className="flex justify-start w-full py-4 px-6 text-[#1A1A1A] dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 bg-white dark:bg-[#FAF9F5]/5 rounded-full border border-[#ceccc2] dark:border-[#e4e0d0]/14 outline-none focus:border focus:ring-[1.3px]"
+          className="flex justify-start w-full py-4 px-6 text-[#1A1A1A] dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 bg-white dark:bg-[#FAF9F5]/5 rounded-full border border-[rgba(26,26,26,0.3)] dark:border-[#e4e0d0]/14 outline-none hover:shadow-[0px_0px_0px_4px_rgba(12,13,14,0.1)] focus:border focus:border-[#426fc9] focus:shadow-[0px_0px_0px_4px_rgba(66,111,201,0.5)]"
         />
       </div>
     </>

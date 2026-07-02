@@ -39,7 +39,7 @@ function Random({ hex, onChange }: RandomProps) {
           type="button"
           onClick={hexy}
           aria-label="Shuffle color"
-          className="flex align-middle bg-white/20 p-3 rounded-sm hover:bg-white/50 transition-colors cursor-pointer"
+          className="flex align-middle bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
         >
           <ShuffleIcon
             size={20}
@@ -52,7 +52,7 @@ function Random({ hex, onChange }: RandomProps) {
         <button
           type="button"
           aria-label="Pick color"
-          className="flex align-middle bg-white/20 p-3 rounded-sm hover:bg-white/50 transition-colors cursor-pointer"
+          className="flex align-middle bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
         >
           <EyedropperIcon
             size={20}
