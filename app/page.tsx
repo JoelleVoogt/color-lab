@@ -12,20 +12,21 @@ import Showcase from "@/components/showcase";
 
 export default function Home() {
   const [hex, setHex] = useState("#C96442");
+  const [name, setName] = useState("brand");
 
   return (
     <>
       <div className="flex flex-col flex-1 items-center">
         <Nav />
         <div className="flex flex-col items-center relative content-start w-full px-4 lg:p-0">
-          <Name />
+          <Name onChange={setName} />
           <div className="flex flex-col sm:flex-row max-w-7xl max-h-4/6 gap-6 w-full h-full mt-12">
             <ColorPicker hex={hex} onChange={setHex} />
-            <CodeOutput hex={hex} />
+            <CodeOutput hex={hex} name={name} />
           </div>
           <ColorOutput hex={hex} />
 
-          {/* (Un)comment Showcase en onthul/verberg het thema */}
+          {/* (Un)comment Showcase en onthul/verberg het theme */}
           {/* <Showcase /> */}
           {/* Uncomment Showcase en onthul de theme */}
         </div>

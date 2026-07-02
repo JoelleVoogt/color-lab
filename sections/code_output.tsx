@@ -9,9 +9,10 @@ import CopyButton from "@/data/copy_clipboard";
 
 type CodeOutputProps = {
   hex: string;
+  name: string;
 };
 
-export default function ColorPicker({ hex }: CodeOutputProps) {
+export default function ColorPicker({ hex, name }: CodeOutputProps) {
   const scale = generateScale(hex);
   const [copied, setCopied] = useState(false);
 
@@ -19,7 +20,7 @@ export default function ColorPicker({ hex }: CodeOutputProps) {
     if (copied === true) {
       setTimeout(() => {
         setCopied(false);
-      }, 350);
+      }, 600);
     }
   }, [copied]);
 
@@ -31,15 +32,15 @@ export default function ColorPicker({ hex }: CodeOutputProps) {
             type="button"
             onClick={() => {
               CopyButton({
-                text: `--color-brand-${scale[0].step} : ${formatHex(scale[0])} ; 
---color-brand-${scale[1].step} : ${formatHex(scale[1])} ;
---color-brand-${scale[2].step} : ${formatHex(scale[2])} ;
---color-brand-${scale[3].step} : ${formatHex(scale[3])} ;
---color-brand-${scale[4].step} : ${formatHex(scale[4])} ;
---color-brand-${scale[5].step} : ${formatHex(scale[5])} ;
---color-brand-${scale[6].step} : ${formatHex(scale[6])} ;
---color-brand-${scale[7].step} : ${formatHex(scale[7])} ;
---color-brand-${scale[8].step} : ${formatHex(scale[8])} ;`,
+                text: `--color-${name}-${scale[0].step} : ${formatHex(scale[0])} ; 
+--color-${name}-${scale[1].step} : ${formatHex(scale[1])} ;
+--color-${name}-${scale[2].step} : ${formatHex(scale[2])} ;
+--color-${name}-${scale[3].step} : ${formatHex(scale[3])} ;
+--color-${name}-${scale[4].step} : ${formatHex(scale[4])} ;
+--color-${name}-${scale[5].step} : ${formatHex(scale[5])} ;
+--color-${name}-${scale[6].step} : ${formatHex(scale[6])} ;
+--color-${name}-${scale[7].step} : ${formatHex(scale[7])} ;
+--color-${name}-${scale[8].step} : ${formatHex(scale[8])} ;`,
               });
               setCopied(true);
             }}
@@ -66,7 +67,7 @@ export default function ColorPicker({ hex }: CodeOutputProps) {
                 <CodeVariable
                   key={color.step}
                   color="--color"
-                  name="brand"
+                  name={name}
                   scale={String(color.step)}
                   value={formatHex(color)}
                 />
