@@ -5,7 +5,7 @@ export default function Name() {
         <input
           type="text"
           placeholder="Name your color..."
-          className="flex justify-start w-full py-4 px-6 text-[#1A1A1A] dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 bg-white dark:bg-[#FAF9F5]/5 rounded-full border border-[#ceccc2] dark:border-[#e4e0d0]/14 outline-none focus:border-[#C96442] focus:ring-[1.3px] focus:ring-[#C96442]"
+          className="flex justify-start w-full py-4 px-6 text-[#1A1A1A] dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 bg-white dark:bg-[#FAF9F5]/5 rounded-full border border-[#ceccc2] dark:border-[#e4e0d0]/14 outline-none focus:border focus:ring-[1.3px]"
         />
       </div>
     </>

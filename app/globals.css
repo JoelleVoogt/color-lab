@@ -10,6 +10,17 @@
   --color-foreground: var(--foreground);
   --font-serif: "anthropicSerif";
   --font-mono: "anthropicMono";
+  /* vervang hier je brand */
+
+  --color-brand-100: #f0f5ff;
+  --color-brand-200: #cad9f3;
+  --color-brand-300: #a9bde0;
+  --color-brand-400: #7ea0dc;
+  --color-brand-500: #5e84ca;
+  --color-brand-600: #44629a;
+  --color-brand-700: #334361;
+  --color-brand-800: #1b2639;
+  --color-brand-900: #080b11;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -8,6 +8,7 @@ import ColorPicker from "@/sections/color_picker";
 import CodeOutput from "@/sections/code_output";
 import ColorOutput from "@/sections/color_output";
 import Footer from "@/sections/footer";
+import Showcase from "@/components/showcase";
 
 export default function Home() {
   const [hex, setHex] = useState("#C96442");
@@ -18,11 +19,15 @@ export default function Home() {
         <Nav />
         <div className="flex flex-col items-center relative content-start w-full px-4 lg:p-0">
           <Name />
-          <div className="flex flex-col sm:flex-row max-w-7xl max-h-4/6 gap-8 w-full h-full mt-12">
+          <div className="flex flex-col sm:flex-row max-w-7xl max-h-4/6 gap-6 w-full h-full mt-12">
             <ColorPicker hex={hex} onChange={setHex} />
             <CodeOutput hex={hex} />
           </div>
           <ColorOutput hex={hex} />
+
+          {/* (Un)comment Showcase en onthul/verberg het thema */}
+          {/* <Showcase /> */}
+          {/* Uncomment Showcase en onthul de theme */}
         </div>
       </div>
       <Footer />

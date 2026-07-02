@@ -56,7 +56,7 @@ export default function ColorPicker({ hex }: CodeOutputProps) {
 
         <div className="flex flex-col gap-6 pr-0 pt-5 md:pt-0 md:pr-24">
           <div className="flex flex-row gap-2">
-            <p className="font-mono text-[#FFA1EE]">:root</p>
+            <p className="font-mono text-[#FFA1EE]">theme</p>
             <p className="font-mono text-[#FFEE58] w-full">{"{"}</p>
           </div>
 
