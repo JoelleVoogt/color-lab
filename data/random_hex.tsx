@@ -1,10 +1,11 @@
+"use client";
+
 import { useState } from "react";
 
 function Random() {
-  const [typeOfColor, setTypeOfColor] = useState("hex");
-  const [color, setColor] = useState("#000000");
+  const [color, setColor] = useState("#C96442");
 
-  function randomColorUtility(length) {
+  function randomColorUtility(length: number) {
     return Math.floor(Math.random() * length);
   }
 
@@ -14,23 +15,16 @@ function Random() {
     for (let i = 0; i < 6; i++) {
       hexColor += hex[randomColorUtility(hex.length)];
     }
+    console.log("Generated hex color:", hexColor);
     setColor(hexColor);
-  }
-
-  function rgb() {
-    // Implementation for RGB color generation
   }
 
   return (
     <div
       className="flex justify-evenly items-center mt-4 px-[30px] text-white"
-      style={{ background: color, width: "100vw", height: "100vh" }}
+      style={{ background: color, width: "50vw", height: "50vh" }}
     >
-      <button onClick={() => setTypeOfColor("hex")}>Create HEX Color</button>
-      <button onClick={() => setTypeOfColor("rgb")}>Create RGB Color</button>
-      <button onClick={typeOfColor === "hex" ? hexy : rgb}>
-        Generate Random Color
-      </button>
+      <button onClick={hexy}>{color}</button>
     </div>
   );
 }
