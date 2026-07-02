@@ -3,7 +3,7 @@
 import ColorVariable from "@/components/color_variable";
 import { formatHex, wcagContrast } from "culori";
 import { generateScale } from "@/data/generate_scale";
-import CopyButton from "@/components/copy_clipboard";
+import CopyButton from "@/data/copy_clipboard";
 
 export default function ColorOutput() {
   const scale = generateScale("#C96442");

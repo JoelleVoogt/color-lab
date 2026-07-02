@@ -5,7 +5,7 @@ import { CopyIcon, CheckIcon } from "@phosphor-icons/react";
 import CodeVariable from "@/components/code_variable";
 import { generateScale } from "@/data/generate_scale";
 import { formatHex } from "culori";
-import CopyButton from "@/components/copy_clipboard";
+import CopyButton from "@/data/copy_clipboard";
 
 export default function ColorPicker() {
   const scale = generateScale("#C96442");
