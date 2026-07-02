@@ -1,9 +1,14 @@
 import Random from "@/data/random_hex";
 
-export default function ColorPicker() {
+type ColorPickerProps = {
+  hex: string;
+  onChange: (hex: string) => void;
+};
+
+export default function ColorPicker({ hex, onChange }: ColorPickerProps) {
   return (
     <>
-      <Random />
+      <Random hex={hex} onChange={onChange} />
     </>
   );
 }

@@ -1,13 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
 import { wcagContrast } from "culori";
 
-function Random() {
-  const [color, setColor] = useState("#C96442");
-  const contrastWithBlack = wcagContrast(color, "black");
-  const contrastWithWhite = wcagContrast(color, "white");
+type RandomProps = {
+  hex: string;
+  onChange: (hex: string) => void;
+};
+
+function Random({ hex, onChange }: RandomProps) {
+  const contrastWithBlack = wcagContrast(hex, "black");
+  const contrastWithWhite = wcagContrast(hex, "white");
   const textColor =
     contrastWithBlack > contrastWithWhite ? "#1a1a1a4d" : "#ffffff4d";
   const iconColor =
@@ -23,7 +26,7 @@ function Random() {
     for (let i = 0; i < 6; i++) {
       hexColor += hex[randomColorUtility(hex.length)];
     }
-    setColor(hexColor);
+    onChange(hexColor);
   }
 
   return (
@@ -31,7 +34,7 @@ function Random() {
       role="button"
       onClick={hexy}
       className="flex flex-1 relative p-6 min-h-80 md:min-h-120 justify-center items-center font-mono text-6xl md:text-7xl w-full text-center rounded-2xl cursor-pointer"
-      style={{ backgroundColor: color, color: textColor }}
+      style={{ backgroundColor: hex, color: textColor }}
     >
       <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
         <button
@@ -61,7 +64,7 @@ function Random() {
           />
         </button>
       </div>
-      {color}
+      {hex}
     </div>
   );
 }

@@ -5,8 +5,12 @@ import { formatHex, wcagContrast } from "culori";
 import { generateScale } from "@/data/generate_scale";
 import CopyButton from "@/data/copy_clipboard";
 
-export default function ColorOutput() {
-  const scale = generateScale("#C96442");
+type ColorOutputProps = {
+  hex: string;
+};
+
+export default function ColorOutput({ hex }: ColorOutputProps) {
+  const scale = generateScale(hex);
 
   return (
     <>
