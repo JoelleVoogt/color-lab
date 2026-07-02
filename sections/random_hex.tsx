@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
+import { wcagContrast } from "culori";
 
-function Random() {
+function ColorPicker() {
   const [color, setColor] = useState("#C96442");
 
   function randomColorUtility(length: number) {
@@ -48,4 +49,4 @@ function Random() {
   );
 }
 
-export default Random;
+export default ColorPicker;

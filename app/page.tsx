@@ -1,11 +1,10 @@
 import "./globals.css";
 import Nav from "@/sections/nav";
 import Name from "@/sections/name";
-import ColorPicker from "@/sections/color_picker";
+import ColorPicker from "@/sections/random_hex";
 import CodeOutput from "@/sections/code_output";
 import ColorOutput from "@/sections/color_output";
 import Footer from "@/sections/footer";
-import Random from "@/data/random_hex";
 
 export default function Home() {
   return (
