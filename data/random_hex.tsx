@@ -31,16 +31,15 @@ function Random({ hex, onChange }: RandomProps) {
 
   return (
     <div
-      role="button"
-      onClick={hexy}
       className="flex flex-1 relative p-6 min-h-80 md:min-h-120 justify-center items-center font-mono text-6xl md:text-7xl w-full text-center rounded-2xl cursor-pointer"
       style={{ backgroundColor: hex, color: textColor }}
     >
       <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
         <button
           type="button"
+          onClick={hexy}
           aria-label="Shuffle color"
-          className="flex align-middle bg-white/10 p-3 rounded-sm hover:bg-white/20 transition-colors cursor-pointer"
+          className="flex align-middle bg-white/20 p-3 rounded-sm hover:bg-white/50 transition-colors cursor-pointer"
         >
           <ShuffleIcon
             size={20}
@@ -53,7 +52,7 @@ function Random({ hex, onChange }: RandomProps) {
         <button
           type="button"
           aria-label="Pick color"
-          className="flex align-middle bg-white/10 p-3 rounded-sm hover:bg-white/20 transition-colors cursor-pointer"
+          className="flex align-middle bg-white/20 p-3 rounded-sm hover:bg-white/50 transition-colors cursor-pointer"
         >
           <EyedropperIcon
             size={20}

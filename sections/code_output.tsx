@@ -45,7 +45,7 @@ export default function ColorPicker({ hex, name }: CodeOutputProps) {
               setCopied(true);
             }}
             aria-label="Copy to clipboard"
-            className="flex align-middle bg-[#343434] p-3 rounded-sm hover:bg-[#4A4A4A] transition-colors cursor-pointer"
+            className="flex align-middle p-3 rounded-sm bg-white/20 hover:bg-white/60 transition-colors cursor-pointer"
           >
             {copied ? (
               <CheckIcon size={20} weight="regular" color="white" />
