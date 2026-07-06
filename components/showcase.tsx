@@ -33,7 +33,7 @@ function CardButtons({
 
 export default function Showcase() {
   return (
-    <div className="flex flex-col sm:flex-row max-w-7xl w-full gap-6 my-12">
+    <div className="flex flex-col sm:flex-row max-w-7xl w-full gap-6 m-12">
       <div className="flex flex-col flex-1 p-8 rounded-2xl border border-black bg-brand-100">
         <h3 className="text-xl font-semibold text-black">Light showcase</h3>
         <p className="mt-3 text-black/80">
@@ -48,7 +48,7 @@ export default function Showcase() {
         />
       </div>
 
-      <div className="flex flex-col flex-1 p-8 rounded-2xl bg-brand-900">
+      <div className="flex flex-col flex-1 p-8 rounded-2xl bg-brand-800">
         <h3 className="text-xl font-semibold text-white">Dark showcase</h3>
         <p className="mt-3 text-white/80">
           The quick brown fox jumps over the lazy dog. Sphinx of black quartz,

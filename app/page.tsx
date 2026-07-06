@@ -26,7 +26,7 @@ export default function Home() {
           </div>
           <ColorOutput hex={hex} />
 
-          {/* (Un)comment Showcase en onthul/verberg het theme */}
+          {/* Uncomment Showcase en onthul de theme */}
           {/* <Showcase /> */}
           {/* Uncomment Showcase en onthul de theme */}
         </div>

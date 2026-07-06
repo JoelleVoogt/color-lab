@@ -11,15 +11,15 @@
   --font-serif: "anthropicSerif";
   --font-mono: "anthropicMono";
 
-  --color-brand-100: #f0f7f2;
-  --color-brand-200: #c9ded1;
-  --color-brand-300: #a7c4b2;
-  --color-brand-400: #7aae8e;
-  --color-brand-500: #579571;
-  --color-brand-600: #3e7053;
-  --color-brand-700: #314a3b;
-  --color-brand-800: #1a2a20;
-  --color-brand-900: #080c09;
+  /* --color-brand-100: #f0f7f2;
+  --color-brand-200: #cbdecf;
+  --color-brand-300: #a9c4af;
+  --color-brand-400: #7fad8a;
+  --color-brand-500: #5d946c;
+  --color-brand-600: #436f4f;
+  --color-brand-700: #334a39;
+  --color-brand-800: #1b2a1f;
+  --color-brand-900: #080c09; */
 }
 
 @media (prefers-color-scheme: dark) {

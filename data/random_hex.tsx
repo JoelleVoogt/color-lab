@@ -49,11 +49,11 @@ function Random({ hex, onChange }: RandomProps) {
             }}
           />
         </button>
-        <button
-          type="button"
+        <div
           aria-label="Pick color"
           className="flex align-middle bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
         >
+          {/* <input type="color" value="#c96442" aria-label="hidden" /> */}
           <EyedropperIcon
             size={20}
             weight="regular"
@@ -61,7 +61,7 @@ function Random({ hex, onChange }: RandomProps) {
               color: iconColor,
             }}
           />
-        </button>
+        </div>
       </div>
       {hex}
     </div>
