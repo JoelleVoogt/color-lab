@@ -1,8 +1,10 @@
 # Color Lab
 
-![Color Lab preview](public/thumbnail2.png)
+Dit is een interactieve kleurentool waarmee je vanuit één basiskleur automatisch een volledig, toegankelijk kleurenpalet genereert. Inclusief kant-en-klare CSS-variabelen om direct in je project te plakken.
 
-Een interactieve kleurentool waarmee je vanuit één basiskleur automatisch een volledig, toegankelijk kleurenpalet genereert — inclusief kant-en-klare CSS-variabelen om direct in je project te plakken.
+Live: [color-lab-delta.vercel.app](https://color-lab-delta.vercel.app/)
+
+![Color Lab preview](public/thumbnail2.png)
 
 ## Functionaliteit
 
