@@ -2,6 +2,9 @@
 
 import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
 import { wcagContrast } from "culori";
+import React from "react";
+import { SliderPicker } from "react-color";
+import { useState } from "react";
 
 type RandomProps = {
   hex: string;
@@ -15,6 +18,7 @@ function Random({ hex, onChange }: RandomProps) {
     contrastWithBlack > contrastWithWhite ? "#1a1a1a4d" : "#ffffff4d";
   const iconColor =
     contrastWithBlack > contrastWithWhite ? "#1a1a1a" : "#ffffff";
+  const [open, setOpen] = useState(false);
 
   function randomColorUtility(length: number) {
     return Math.floor(Math.random() * length);
@@ -27,6 +31,7 @@ function Random({ hex, onChange }: RandomProps) {
       hexColor += hex[randomColorUtility(hex.length)];
     }
     onChange(hexColor);
+    console.log("onChange: ", onChange);
   }
 
   return (
@@ -35,11 +40,12 @@ function Random({ hex, onChange }: RandomProps) {
       style={{ backgroundColor: hex, color: textColor }}
     >
       <div className="flex flex-row gap-2 absolute top-4 right-4 md:top-6 md:right-6">
+        {/* De kleuren shuffelaar */}
         <button
           type="button"
           onClick={hexy}
           aria-label="Shuffle color"
-          className="flex align-middle bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
+          className="flex items-center bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
         >
           <ShuffleIcon
             size={20}
@@ -49,9 +55,20 @@ function Random({ hex, onChange }: RandomProps) {
             }}
           />
         </button>
-        <div
+
+        {/* De functionele color picker */}
+
+        <input
+          type="color"
           aria-label="Pick color"
-          className="flex align-middle bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
+          className="flex items-center bg-white/40 p-2 rounded-sm hover:bg-white/60 transition-colors cursor-pointer h-12 border-0"
+        ></input>
+
+        {/* De styling color picker */}
+        <button
+          type="button"
+          aria-label="Pick color"
+          className="flex items-center bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
         >
           {/* <input type="color" value="#c96442" aria-label="hidden" /> */}
           <EyedropperIcon
@@ -61,7 +78,7 @@ function Random({ hex, onChange }: RandomProps) {
               color: iconColor,
             }}
           />
-        </div>
+        </button>
       </div>
       {hex}
     </div>
