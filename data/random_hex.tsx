@@ -2,9 +2,6 @@
 
 import { ShuffleIcon, EyedropperIcon } from "@phosphor-icons/react";
 import { wcagContrast } from "culori";
-import React from "react";
-import { SliderPicker } from "react-color";
-import { useState } from "react";
 
 type RandomProps = {
   hex: string;
@@ -18,7 +15,6 @@ function Random({ hex, onChange }: RandomProps) {
     contrastWithBlack > contrastWithWhite ? "#1a1a1a4d" : "#ffffff4d";
   const iconColor =
     contrastWithBlack > contrastWithWhite ? "#1a1a1a" : "#ffffff";
-  const [open, setOpen] = useState(false);
 
   function randomColorUtility(length: number) {
     return Math.floor(Math.random() * length);
