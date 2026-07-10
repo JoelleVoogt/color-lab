@@ -54,27 +54,25 @@ function Random({ hex, onChange }: RandomProps) {
 
         {/* De functionele color picker */}
 
-        <input
-          type="color"
-          aria-label="Pick color"
-          className="flex items-center bg-white/40 p-2 rounded-sm hover:bg-white/60 transition-colors cursor-pointer h-12 border-0"
-        ></input>
-
-        {/* De styling color picker */}
-        <button
-          type="button"
-          aria-label="Pick color"
-          className="flex items-center bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer"
-        >
-          {/* <input type="color" value="#c96442" aria-label="hidden" /> */}
-          <EyedropperIcon
-            size={20}
-            weight="regular"
-            style={{
-              color: iconColor,
-            }}
-          />
-        </button>
+        <div className="flex items-center bg-white/40 p-3 rounded-sm hover:bg-white/60 transition-colors cursor-pointer">
+          <input
+            id="color-picker"
+            type="color"
+            defaultValue={hex}
+            onChange={(e) => onChange(e.target.value)}
+            aria-label="Pick color"
+            className="sr-only"
+          ></input>
+          <label htmlFor="color-picker">
+            <EyedropperIcon
+              size={20}
+              weight="regular"
+              style={{
+                color: iconColor,
+              }}
+            />
+          </label>
+        </div>
       </div>
       {hex}
     </div>
