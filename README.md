@@ -12,7 +12,7 @@ Live: [color-lab-delta.vercel.app](https://color-lab-delta.vercel.app/)
 - **Kleur genereren** — shuffle naar een willekeurige hexkleur; een eyedropper-knop staat klaar voor het overnemen van een kleur van het scherm
 - **Automatisch paletten** — op basis van de gekozen kleur wordt met [culori](https://culorijs.org) (in de OKLCH-kleurruimte) een schaal van 9 tinten gegenereerd (100 t/m 900), zodat lichtheid en verzadiging over de hele schaal consistent blijven
 - **Code Output** — bekijk alle gegenereerde tinten direct als CSS-variabelen (`--color-<naam>-<stap>`) in een code-editor-achtige weergave, en kopieer de hele set met één klik
-- **Color Output** — een paletrij met alle 9 tinten, met per tint de hexwaarde en automatisch de best leesbare tekstkleur (zwart/wit) op basis van WCAG-contrast; per tint ook los te kopiëren
+- **Color Output** — een palet rij met alle 9 tinten, met per tint de hexwaarde en automatisch de best leesbare tekstkleur (zwart/wit) op basis van WCAG-contrast; per tint ook los te kopiëren
 - **Showcase** _(optioneel, uitgecommentarieerd in `app/page.tsx`)_ — voorbeeldkaarten die laten zien hoe het palet er in de praktijk uitziet (knoppen in default/hover/tertiary staat, licht en donker)
 - Volledig responsive, van mobiel tot desktop
 - Donkere modus via systeeminstellingen
