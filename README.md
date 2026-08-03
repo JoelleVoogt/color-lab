@@ -52,7 +52,7 @@ sections/
   color_output.tsx     # Paletrij met alle gegenereerde tinten
   footer.tsx            # Footer
 components/
-  color_variable.tsx   # Eén tint-kaart in de palet rij
+  color_variable.tsx   # Eén tint-kaart in de paletrij
   code_variable.tsx     # Eén regel CSS-variabele in de code-uitvoer
   showcase.tsx          # Voorbeeldkaarten die het palet in context tonen
 data/
