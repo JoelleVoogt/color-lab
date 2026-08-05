@@ -54,7 +54,7 @@ sections/
 components/
   color_variable.tsx   # Eén tint-kaart in de paletrij
   code_variable.tsx     # Eén regel CSS-variabele in de code-uitvoer
-  showcase.tsx          # Voorbeeldkaarten die het palet in context tonen
+  showcase.tsx          # Voorbeeld kaarten die het palet in context tonen
 data/
   generate_scale.tsx   # Genereert de 9-staps kleurschaal (OKLCH) uit een hexkleur
   random_hex.tsx        # Genereert een willekeurige hexkleur
